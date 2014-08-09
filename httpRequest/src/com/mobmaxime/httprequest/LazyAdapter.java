@@ -57,6 +57,8 @@ public class LazyAdapter extends BaseAdapter {
 			holder.title = (TextView) convertView.findViewById(R.id.title);
 
 			convertView.setTag(holder);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
 		}
 		createRow rowItem = (createRow) getItem(position);
 
